@@ -7,8 +7,11 @@
 添付している テストデータは３，６行目に欠損データを与えている．
 
 ～～使い方～～
+
 CC = CsvConvert()                                         ＃クラスを作成
+
 header, data = CC.convert_np("csv_matrix/test_data.csv")  ＃パスを引数として入力，ヘッダーとデータの変数名を指定する．
+
 
 上記の例だとheaderにはヘッダーのlist, dataにはヘッダー以下の数値データのnumpy.arrayが格納される．変数名を指定しない場合，タプルの中にheader, dataが格納される．
 
