@@ -20,7 +20,7 @@ header, data = CC.convert_np("csv_matrix/test_data.csv")  ＃パスを引数と�
 上記の例だとheaderにはヘッダーのlist, dataにはヘッダー以下の数値データのnumpy.arrayが格納される．変数名を指定しない場合，タプルの中にheader, dataが格納される．
 
 
-欠損データの削除
+〇欠損データの削除
 
 欠損データを含む行を削除する．このとき削除した行数（ヘッダーを除き，1から始まる．）がprintされる．
 
@@ -29,7 +29,7 @@ header, data = CC.convert_np("csv_matrix/test_data.csv")  ＃パスを引数と�
 CC.delete_nanrow(data)  ＃引数にnumpy.arrayを入力
 
 
-欠損データの置換
+〇欠損データの置換
 
 欠損データを検索して2引数に入力した数値で置換する．
 
