@@ -44,7 +44,7 @@ class CsvConvert:
 
 if __name__ == "__main__":
     CC = CsvConvert()
-    header, data = CC.convert_np("csv_matrix/test_data.csv")
+    header, data = CC.convert_np("csv_convert/test_data.csv")
     print(header)
     print(data)
     print(CC.delete_nanrow(data))
