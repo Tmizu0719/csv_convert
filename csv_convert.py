@@ -3,7 +3,7 @@ January 4th 2020
             Author T.Mizumoto
 """
 #! python 3
-# ver.x1.00
+# ver.01.00
 # csv_convert.py  -  this program converts .csv file to matrix
 
 import numpy as np
@@ -44,7 +44,7 @@ class CsvConvert:
 
 if __name__ == "__main__":
     CC = CsvConvert()
-    header, data = CC.convert_np("csv_convert/test_data.csv")
+    header, data = CC.convert_np("test_data.csv")
     print(header)
     print(data)
     print(CC.delete_nanrow(data))
