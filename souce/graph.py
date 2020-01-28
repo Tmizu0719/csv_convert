@@ -18,15 +18,16 @@ class Graph(object):
         plt.rcParams['xtick.major.width'] = 1.0	
         plt.rcParams['ytick.major.width'] = 1.0
         plt.rcParams['font.size'] = 12 
-        plt.rcParams['axes.linewidth'] = 1.0
+        plt.rcParams['axes.linewidth'] = 1.5
         plt.rcParams["legend.framealpha"] = 1.0
         plt.rcParams["legend.fancybox"] = False
+        plt.rcParams["legend.edgecolor"] = "black"
         self.colorlist = ["blue", "green", "red", "orange", "magenta", "black", "blue", "green", "red", "orange", "magenta", "black"]
         self.markerlist = ['o','^','v','<','>','d','*', 'o','^','v','<','>','d','*']
         self.stylelist = ['-', '--', '-.', ':', '-', '--', '-.', ':']
         self.dashes_point = [0.8, 0.5, 2, 0.5]
         plt.figure(figsize = (6.47, 4), dpi = 200)
-        plt.grid(which = "both")
+        plt.grid(which = "both", color = "black")
         self.label = []
 
     # only num <= 8
