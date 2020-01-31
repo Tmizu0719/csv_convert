@@ -18,10 +18,10 @@ from graph import Graph
 filetype = "csv"
 # number of base(x-axis) column
 base = 0
-xlabel = "xlabel $\it{x}$"
-ylabel = "ylabel $\it{y}$"
+xlabel = "time $\it{t}$ [-]"
+ylabel = "volum $\it{v}$ [-]"
 xmin, xmax = 0, 5
-ymin, ymax = 0, 430
+ymin, ymax = -2, 2 
 
 ## main
 # get file path

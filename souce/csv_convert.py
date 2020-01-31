@@ -3,10 +3,11 @@ January 4th 2020
             Author T.Mizumoto
 """
 #! python 3
-# ver.01.00
+# ver.01.10
 # csv_convert.py  -  this program converts .csv file to matrix
 
 import numpy as np
+import sys
 
 class CsvConvert:
     delimiter = ","
@@ -41,6 +42,23 @@ class CsvConvert:
     def replace_nan(self, data, nan):
         replace_data = np.nan_to_num(data, nan = nan)
         return replace_data
+
+    def D3_connect(self, pathlist):
+        count = 0
+        for i in pathlist:
+            if count == 0:
+                header, data = self.convert_np(i)
+            else:
+                h_tmp, d_tmp = self.convert_np(i)
+                if not header == h_tmp:
+                    print("ERROR: The header is different.")
+                    print("error file path: " + i)
+                    sys.exit(1)
+                else:
+                    data = np.dstack([data, d_tmp])
+            count += 1
+        return header, data
+
 
 if __name__ == "__main__":
     CC = CsvConvert()
