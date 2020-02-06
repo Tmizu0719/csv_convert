@@ -1,4 +1,4 @@
-# csv_convert
+# csv_convert 
  this program converts csv file to matrix 
 
 このプログラムはヘッダーを持つcsvファイルを，ヘッダーとデータにそれぞれlistとnumpyarrayの形式に変換し，のちのデータ処理を容易く行うためのプログラムである．
