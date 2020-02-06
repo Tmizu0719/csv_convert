@@ -3,7 +3,7 @@ December 7th 2019
             Author T.Mizumoto
 """
 #! python3
-# ver.01.20
+# ver.01.50
 # Graph.py  -  my graph style
 
 import numpy
@@ -29,6 +29,7 @@ class Graph(object):
         plt.figure(figsize = (6.47, 4), dpi = 200)
         plt.grid(which = "both", color = "black")
         self.label = []
+        self.language = "en"
 
     # only num <= 8
     def line(self, x, y, num):
@@ -58,9 +59,12 @@ class Graph(object):
             markerfacecolor ='w', color = 'k', linestyle = 'None')
 
     def axis_label(self, x, y):
-        xlabel = plt.xlabel(x)
-        ylabel = plt.ylabel(y)
-        return xlabel, ylabel
+        if self.language == "jp":
+            plt.xlabel(x, fontname = "MS Mincho")
+            plt.ylabel(y, fontname = "MS Mincho")
+        else:
+            plt.xlabel(x)
+            plt.ylabel(y)
     
     def show(self):
         plt.legend()
